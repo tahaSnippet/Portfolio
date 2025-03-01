@@ -1,0 +1,15 @@
+.contact-container {
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+
+.contact-container a {
+  color: #00f2ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-container a:hover {
+  text-decoration: underline;
+}

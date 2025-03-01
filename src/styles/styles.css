@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("https://images.unsplash.com/photo-1531297484001-80022131f5a1?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+}
+
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1,
+.hero-content p {
+  color: white;
+}
+
+/* Letter-by-letter smooth transition */
+.transitioning-words {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00f2ff; /* Vibrant color */
+  display: inline-block;
+  border-right: 3px solid white;
+  white-space: nowrap;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Slide-in animation for the main heading */
+.slide-in {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Slide-in from left for description */
+.slide-left {
+  opacity: 0;
+  margin: 0px 200px;
+  transform: translateX(-50px);
+  animation: slideLeft 1s forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Short About Me Description */
+.description {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeIn 1s 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
